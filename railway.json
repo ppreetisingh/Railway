@@ -1,0 +1,103 @@
+{
+	"DEL" : {
+	"code":"DEL",
+	"name" : "New Delhi Railway Station" ,
+	"city" : "Delhi",
+	"destination" : [
+	"MUM" ,
+	"GOA" ,
+	"BANG",
+	"LUC" ,
+	"GUJ" ,
+	"PUNE" ,
+]
+
+	},
+
+
+	"MUM" :{
+	"code":"MUM",
+	"name" : "Mumbai Railway Station" ,
+	"city" : "Mumbai",
+	"destination" : [
+	"DEL" ,
+	"GOA" ,
+	"BANG",
+	"LUC" ,
+	"GUJ" ,
+	"PUNE" ,
+]
+	},
+
+	
+	"GOA" :{
+	"code":"GOA",
+	"name" : "Goa Railway Station" ,
+	"city" : "Goa",
+	"destination" : [
+	"DEL" ,
+	"MUM" ,
+	"BANG",
+	"LUC" ,
+	"GUJ" ,
+	"PUNE" ,
+    ]
+	},
+
+
+	"BANG" :{
+	"code":"BANG",
+	"name" : "Banglore Railway Station" ,
+	"city" : "Banglore",
+	"destination" : [
+	"DEL" ,
+	"GOA" ,
+	"MUM",
+	"LUC" ,
+	"GUJ" ,
+	"PUNE" ,
+]
+	},
+	
+	"LUC" :{
+	"code":"LUC",
+	"name" : "Lucknow Railway Station" ,
+	"city" : "Lucknow",
+	"destination" : [
+	"DEL" ,
+	"GOA" ,
+	"BANG",
+	"MUM" ,
+	"GUJ" ,
+	"PUNE" ,
+]
+	},
+	
+	"GUJ" :{
+	"code":"GUJ",
+	"name" : "Gujarat Railway Station" ,
+	"city" : "Gujarat",
+	"destination" : [
+	"DEL" ,
+	"GOA" ,
+	"BANG",
+	"LUC" ,
+	"MUM" ,
+	"PUNE" ,
+]
+	},
+	
+	"PUNE" :{
+	"code":"PUNE",
+	"name" : "Pune Railway Station" ,
+	"city" : "Pune",
+	"destination" : [
+	"DEL" ,
+	"GOA" ,
+	"BANG",
+	"LUC" ,
+	"GUJ" ,
+	"MUM" ,
+]
+	},
+	}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function open(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+	</script>
+	
+	<style type="text/css">
+	#logo{
+     height: 100px ;
+      width:100px;
+      margin-left:220px;
+      margin-top: 30px;
+	}
+		p1{
+		  margin-top:350px;
+          font-size: 35px; 
+          color: red ;
+          font-family :"Times New Roman";
+          margin-left: 100px
+         
+		}
+		ul.tab {
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+    margin-left: 220px;
+    margin-right: 220px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: red;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 100px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+	</style>
+	</head>
+<body>
+
+<img id="logo" ; src="C:\Users\Administrator\Desktop\project\railway.png" >
+<p1> INDIAN RAILWAYS RESERVATION</p1>
+<ul class="tab">
+  <li><a href="#" class="tablinks" onclick="open(event, 'Book')">Book your Tickets</a></li>
+  <li><a href="#" class="tablinks" onclick="open(event, 'Seat')">Seat Availability</a></li>
+  <li><a href="#" class="tablinks" onclick="open(event, 'Enquiry')">Fare Enquiry</a></li>
+
+</ul>
+
+<div id="Book" class="tabcontent">
+  <h3>Book Your Tickets</h3>
+ 
+</div>
+
+<div id="Seat" class="tabcontent">
+  <h3>Seat Availabilty</h3>
+  
+</div>
+<div id="Enquiry" class="tabcontent">
+  <h3>Fare Enquiry</h3>
+  
+</div>
+
+</body>
