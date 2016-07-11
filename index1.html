@@ -11,51 +11,27 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function open(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+	</script>
 	
-	<script type="text/javascript" >
-var module = angular.module("myApp", ['ngRoute']);
-    module.config('$routeProvider',
-        function($routeProvider) {
-            $routeProvider
-                    .when('/seat', {                    //Route1
-                        templateUrl: 'temp/seat.html',
-                        controller: 'SeatCtrl'
-                    })
-                    .when('/book', {                    //Route2
-                        templateUrl: 'temp/book.html',
-                        controller: 'BookCtrl'
-                    })
-                    .otherwise({                                 //Default Route
-                        redirectTo: '/book',
-                        
-                    })
-        });
-    modd.controller('Myctrl',function($scope,$routeParams){
-  $scope.setActive=function(type)
-  {
-    $scope.trainActive='';
-    $scope.reservationActive='';
-    $scope[type+'Active']='active';
-  }
-});
-modd.controller('SeatCtrl',function($scope,Seat,Book,$http){
-  $scope.setActive('railway');
-  $scope.train;
-  $http.get('railway.json').success(function(data,status){
-  });
-  console.log($scope.railway);
-  $scope.reserve=function(code)
-  {
-    Reservation.add()
-  }
-});
-modd.controller('Bookctrl',function($scope,Book,Seat){
-  $scope.setActive('book');
-        
-    });
-  
-  
-   </script>
 	<style type="text/css">
 	#logo{
      height: 100px ;
@@ -109,14 +85,14 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 }
 	</style>
 	</head>
-<body ng-app='myApp' ng-controller='Myctrl'>
+<body>
 
 <img id="logo" ; src="C:\Users\admin\Desktop\project\railway.png" >
 <p1> INDIAN RAILWAYS RESERVATION</p1>
 <ul class="tab">
-  <li><a href="#/book" class="tablinks" onclick=()>Book your Tickets</a></li>
-  <li><a href="#/seat" class="tablinks" onclick=()>Seat Availability</a></li>
-  <li><a href="#/enquiry" class="tablinks" onclick=()>Fare Enquiry</a></li>
+  <li><a href="#" class="tablinks" onclick="open(event, 'Book')">Book your Tickets</a></li>
+  <li><a href="#" class="tablinks" onclick="open(event, 'Seat')">Seat Availability</a></li>
+  <li><a href="#" class="tablinks" onclick="open(event, 'Enquiry')">Fare Enquiry</a></li>
 
 </ul>
 
@@ -133,5 +109,5 @@ ul.tab li a:focus, .active {background-color: #ccc;}
   <h3>Fare Enquiry</h3>
   
 </div>
-<div ng-view> </div>
+
 </body>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js></script>
+	<script src="https://code.angularjs.org/1.5.7/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var mod=angular.module("MyApp",[]);
+		mod.controller("myctrl",function($scope,$http){
+			$http.get('railway.json').success(function(data){
+				$scope.railway=data;
+			});
+		});
+	</script>
+	<head>
+	<body ng-app="MyApp" ng-controller="myctrl">
+	<div class="container">
+<h3>Seats Available</h3>
+<div class="controls controls-row">
+	<input type="text" class="input-small" placeholder="origin" ng-model="search.origin"/>
+	<input type="text" class="input-small" placeholder="destination" ng-model="search.destination"/>
+</div>
+
+<table class="table">
+	<thead>
+		<tr class="success">
+			<th>Station Code</th>
+			<th>Name</th>
+			<th>Destination</th>
+		    <th>Price</th>
+			<th>Seats Available</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr ng-repeat="railway in railway | filter:search">
+			<td>{{railway.code}}</td>
+			<td>{{railway.name}}</td>
+			<td>{{railway.destination}}</td>
+			<td>{{railway.price}}</td>
+
+			<td>{{railway.seats}}</td>
+			
+			<td><button type="button" class="btn btn-primary" ng-click="reserve({{railway.code}},{{railway.name}},{{railway.destination}},{{railway.price}},{{railway.seats}})">Reserve</button></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</head>

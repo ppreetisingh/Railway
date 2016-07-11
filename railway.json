@@ -3,6 +3,8 @@
 	"code":"DEL",
 	"name" : "New Delhi Railway Station" ,
 	"city" : "Delhi",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"MUM" ,
 	"GOA" ,
@@ -19,6 +21,8 @@
 	"code":"MUM",
 	"name" : "Mumbai Railway Station" ,
 	"city" : "Mumbai",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"GOA" ,
@@ -34,6 +38,8 @@
 	"code":"GOA",
 	"name" : "Goa Railway Station" ,
 	"city" : "Goa",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"MUM" ,
@@ -49,6 +55,8 @@
 	"code":"BANG",
 	"name" : "Banglore Railway Station" ,
 	"city" : "Banglore",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"GOA" ,
@@ -63,6 +71,8 @@
 	"code":"LUC",
 	"name" : "Lucknow Railway Station" ,
 	"city" : "Lucknow",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"GOA" ,
@@ -77,6 +87,8 @@
 	"code":"GUJ",
 	"name" : "Gujarat Railway Station" ,
 	"city" : "Gujarat",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"GOA" ,
@@ -91,6 +103,8 @@
 	"code":"PUNE",
 	"name" : "Pune Railway Station" ,
 	"city" : "Pune",
+	"seats": "20" ,
+	"price" : "200" ,
 	"destination" : [
 	"DEL" ,
 	"GOA" ,
